@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro"
+import NavBar from "../components/NavBar.astro";
 const { title } = Astro.props
 ---
 
@@ -15,6 +16,7 @@ const { title } = Astro.props
 
 <body>
   <Header />
+  <NavBar />
   <main>
     <slot />
   </main>
@@ -25,8 +27,8 @@ const { title } = Astro.props
 
 <style>
   :root {
-    --primary-color: #0070B8;
-    --second-color: #ff8f47;
+    --primary-color: #ff8f47;
+    --second-color: #0070B8;
   }
 
   :global(*) {
@@ -37,6 +39,5 @@ const { title } = Astro.props
 
   main {
     height: 100vh;
-    background-color: var(--second-color);
   }
 </style>

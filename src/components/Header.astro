@@ -1,6 +1,8 @@
 <header>
-  <h1>SJ Discover</h1>
-  <img src="img/logo.jpg" alt="logo">
+  <a href="/">
+    <h1>SJ Discover</h1>
+    <img src="img/logo.jpg" alt="logo">
+  </a>
 </header>
 
 <style>
@@ -10,10 +12,16 @@
     position: fixed;
     top: 0px;
     right: 0px;
+  }
+
+  a {
+    display: inline;
+    height: 100%;
     display: flex;
     align-items: center;
     column-gap: 10px;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    text-decoration: none;
   }
 
   img {

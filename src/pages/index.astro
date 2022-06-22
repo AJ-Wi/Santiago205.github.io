@@ -1,7 +1,108 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro";
+import Social from "../components/Social.astro";
+import ImgLink from "../components/ImgLink.astro";
 ---
 
 <Layout title="SJ Discover">
-  <h2>hola</h2>
+  <main>
+    <header></header>
+    <article id="body">
+      <section class="body">
+        <h2>Videos Recientes</h2>
+        <hr>
+        <article role="list" class="link-card-grid">
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+          <Card href="/" title="La Ciencia esta aqui" body="Este es un video sobre la ciencia" img="img/fondo.webp" />
+        </article>
+      </section>
+    </article>
+    <aside>
+      <Social title="youtube" img="img/logo.jpg" url="/" />
+      <Social title="youtube" img="img/logo.jpg" url="/" />
+      <Social title="youtube" img="img/logo.jpg" url="/" />
+    </aside>
+    <footer>
+      <section class="licence">
+        <h4>Licence MIT | 2020-present AJ-Wi</h4>
+      </section>
+      <section class="social">
+        <ImgLink url="/" img="img/youtube.png" title="youtube" />
+        <ImgLink url="/" img="img/github.png" title="github" />
+        <ImgLink url="/" img="img/sololearn.png" title="sololearn" />
+        <ImgLink url="/" img="img/twitter.jpg" title="twitter" />
+        <ImgLink url="/" img="img/facebook.svg" title="facebook" />
+      </section>
+    </footer>
+  </main>
 </Layout>
+
+<style>
+  header {
+    padding-top: 4rem;
+    height: 100vh;
+    width: calc(100vw - 1rem);
+    background-color: var(--second-color);
+    background-image: url("img/fondo1.webp");
+    background-size: cover;
+  }
+
+  #body {
+    height: 100vh;
+  }
+
+  .body {
+    width: 80%;
+    height: 100vh;
+    background-color: var(--second-color);
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+
+  .body h2 {
+    text-align: center;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 20px 40px;
+  }
+
+  aside {
+    width: 80%;
+    height: 40vh;
+    background-color: aqua;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+  }
+
+  footer {
+    widows: 100%;
+    height: 5rem;
+    padding: 20px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .social {
+    height: 100%;
+  }
+
+
+  @media (min-width: 768px) {}
+</style>

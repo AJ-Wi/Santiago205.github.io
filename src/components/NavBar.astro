@@ -1,0 +1,42 @@
+---
+import BtnMenu from "./BtnMenu.astro";
+import NavItem from "./NavItem.astro";
+//import Home from "./home.astro";
+---
+
+<nav class="close">
+  <BtnMenu />
+  <NavItem title="Inicio" route="#inicio" icon="home" active="is-active" />
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--second-color);
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+  }
+
+  @media (min-width: 768px) {
+    nav {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 12rem;
+      height: 100vh;
+      transition: all 0.5s ease;
+      position: sticky;
+      top: 0px;
+      left: 0px;
+    }
+
+    .close {
+      width: 3rem;
+      background-color: transparent;
+    }
+
+  }
+</style>

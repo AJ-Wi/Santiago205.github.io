@@ -1,0 +1,109 @@
+---
+import Icons from "./Icons.json"
+const { title, route, icon, active } = Astro.props
+---
+
+<a href={route} class={`nav-item ${active}`}>
+  <div class="nav-icon">
+    <svg viewBox="0 0 48 48">
+      <path d={Icons[icon]} />
+    </svg>
+  </div>
+  <span class="nav-title">{title}</span>
+</a>
+
+<style is:global>
+  .nav-item {
+    text-decoration: none;
+    padding: 0.25rem;
+    text-align: center;
+  }
+
+  .nav-icon {
+    height: 2rem;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .nav-title {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+  }
+
+  .nav-item.is-active {
+    background-color: var(--primary-color);
+  }
+
+  .nav-item.is-active svg {
+    fill: var(--second-color);
+  }
+
+  .nav-item.is-active .nav-title {
+    color: var(--second-color);
+  }
+
+  .nav-item:hover {
+    background-color: var(--primary-color);
+  }
+
+  .nav-item:hover svg {
+    fill: var(--second-color);
+  }
+
+  .nav-item:hover .nav-title {
+    color: var(--second-color);
+  }
+
+  @media (min-width: 768px) {
+    .nav-item {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 1rem;
+      transition: transform 1s ease;
+    }
+
+    .nav-icon {
+      height: 2.5rem;
+    }
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      transition: fill 0.5s ease;
+    }
+
+    .nav-title {
+      width: calc(12rem - 3rem);
+      font-size: 1rem;
+      transition: all 0.5s ease;
+    }
+
+    .close .nav-item.is-active {
+      border-radius: 0 10% 10% 0;
+    }
+
+    .close svg {
+      fill: var(--primary-color);
+    }
+
+    .close .nav-title {
+      opacity: 0;
+    }
+
+    .close .nav-item.is-active svg {
+      fill: var(--second-color);
+    }
+
+    .close .nav-item:hover {
+      border-left: 1px solid transparent;
+      border-radius: 0 10% 10% 0;
+    }
+  }
+</style>

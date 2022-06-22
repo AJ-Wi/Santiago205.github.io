@@ -1,0 +1,23 @@
+---
+import BtnSocial from "./BtnSocial.astro";
+const { title, img, url } = Astro.props;
+---
+
+<section class="social-card">
+  <img src={img} alt={title}>
+  <BtnSocial url={url} />
+</section>
+<style>
+  .social-card {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  img {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+</style>

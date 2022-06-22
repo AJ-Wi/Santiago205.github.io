@@ -1,12 +1,14 @@
 ---
 import BtnMenu from "./BtnMenu.astro";
 import NavItem from "./NavItem.astro";
-//import Home from "./home.astro";
 ---
 
 <nav class="close">
   <BtnMenu />
-  <NavItem title="Inicio" route="#inicio" icon="home" active="is-active" />
+  <NavItem title="Inicio" route="/" icon="home" active="is-active" />
+  <NavItem title="Videos" route="/videos" icon="youtube" />
+  <NavItem title="Articulos" route="/articles" icon="article" />
+  <NavItem title="Buscar" route="/" icon="search" />
 </nav>
 
 <style>

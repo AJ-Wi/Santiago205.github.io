@@ -1,0 +1,22 @@
+{
+  "name": "soysirius",
+  "version": "2.0.3",
+  "description": "El destino definitivo para todo lo relacionado con videojuegos.",
+  "authors": {
+    "name": "wipodev",
+    "email": "ajwipo@gmail.com"
+  },
+  "repository": "/",
+  "scripts": {
+    "dev": "vitepress dev docs --host",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "deploy": "gh-pages -d docs/.vitepress/dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "vitepress": "^1.0.0-beta.6",
+    "vue": "^3.3.4"
+  }
+}

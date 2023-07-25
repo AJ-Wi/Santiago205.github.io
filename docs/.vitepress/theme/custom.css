@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #613ba2;
+  --second-color: #fff;
+  --bg-color: #eae6df;
+  --black-color: #1e1e20;
+  --vp-c-bg: var(--bg-color);
+  --vp-c-bg-soft-down: #aca793;
+  --vp-c-brand: var(--primary-color);
+  --vp-home-hero-name-color: var(--primary-color);
+  --vp-button-brand-border: var(--second-color);
+  --vp-button-brand-text: var(--second-color);
+  --vp-button-brand-hover-border: var(--primary-color);
+  --vp-button-brand-hover-text: var(--primary-color);
+  --vp-button-brand-hover-bg: var(--second-color);
+  --vp-c-sponsor: var(--primary-color);
+}
+
+.dark {
+  --vp-c-bg: var(--black-color);
+  --vp-c-bg-soft-down: var(--black-color);
+}
+
+.VPImage.logo {
+  height: 44px;
+}
+
+.VPTeamPageTitle.title-skill {
+  color: var(--primary-color);
+  padding: 0;
+}
+
+.VPTeamPageSection.section-skill+.VPTeamPageSection.section-skill {
+  margin-top: 40px;
+}
+
+.VPTeamMembersItem.small .avatar.shadow-skill {
+  width: 170px;
+  height: 302px;
+  box-shadow: none;
+}
+
+.avatar-img.logo-skill {
+  border-radius: 12px;
+  max-height: 100%;
+  width: auto;
+}

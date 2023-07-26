@@ -4,7 +4,6 @@ export default {
   description: "El destino definitivo para todo lo relacionado con videojuegos.",
   lastUpdated: true,
   head: [["link", { rel: "icon", href: "/assets/img/favicon.ico", type: "image/svg" }]],
-  srcDir: "./src",
   themeConfig: {
     siteTitle: "SiriusX",
     logo: "/assets/img/logo-main.png",

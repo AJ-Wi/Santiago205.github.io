@@ -5,8 +5,8 @@ hero:
   name: ¡Únete y forma parte de la emoción en cada clic!
   tagline:
   image:
-    src: /assets/img/logo-main.jpg
-    alt: SoySiriusXYZ
+    src: /assets/img/logo-main.png
+    alt: SiriusX
   actions:
     - theme: brand
       text: visit my github

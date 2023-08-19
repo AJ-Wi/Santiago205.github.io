@@ -10,7 +10,13 @@ export default {
     socialLinks: [{ icon: "github", link: "https://github.com/wipodev" }],
     nav: [
       { text: "Inicio", link: "/" },
-      { text: "YouTube", link: "/youtube/" },
+      {
+        text: "YouTube",
+        items: [
+          { text: "Shorts", link: "/youtube/shorts" },
+          { text: "Videos", link: "/youtube/videos" },
+        ],
+      },
       { text: "prueba", link: "/prueba/" },
     ],
     footer: {

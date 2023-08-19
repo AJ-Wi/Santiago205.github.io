@@ -2,15 +2,15 @@
 layout: home
 title: Inicio
 hero:
-  name: ¡Únete y forma parte de la emoción en cada clic!
+  name: ¡Únete y forma parte de la comunidad!
   tagline:
   image:
     src: /assets/img/logo-main.png
     alt: SiriusX
   actions:
     - theme: brand
-      text: visit my github
-      link: https://www.github.com/wipodev
+      text: Únete
+      link: /prueba/
 
 features:
   - icon:
@@ -42,5 +42,5 @@ features:
       dark: /assets/img/redes/discord.svg
       alt: discord
     title: Discord
-    link: https://discord.com/invite/JcDMQfMK3u
+    link: https://discord.gg/3ggfZ6A2jj
 ---

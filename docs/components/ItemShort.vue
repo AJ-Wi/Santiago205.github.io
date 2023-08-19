@@ -1,15 +1,13 @@
 <script setup>
-const baseImage = "https://i.ytimg.com/vi/";
-const baseImageEnd = "/oar2.jpg";
 const baseLink = "https://www.youtube.com/shorts/";
 
-const props = defineProps(["title", "link"]);
+const props = defineProps(["title", "link", "thumbnail", "isShort"]);
 </script>
 
 <template>
-  <article :class="$style.Item">
+  <article v-if="isShort" :class="$style.Item">
     <section :class="$style.BodyItem">
-      <img :src="baseImage + link + baseImageEnd" :alt="title" />
+      <img :src="thumbnail" :alt="title" />
       <h3 :class="$style.TitleItem">{{ title }}</h3>
     </section>
     <section>
@@ -46,6 +44,7 @@ const props = defineProps(["title", "link"]);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* Número de líneas que deseas mostrar (en este caso, 2) */
   overflow: hidden;
+  min-height: 58px;
 }
 
 .LinkItem {

@@ -6,7 +6,10 @@ title: YouTube
 <script setup>
   import HeaderSection from "../components/HeaderSection.vue"
   import ItemsSection from "../components/ItemsSection.vue"
-  import { Shorts } from "../public/data/shorts";
+  import { readDataYoutube } from "../composables/UseReadDataYoutube";
+
+const { makeRequest, videos, error } = readDataYoutube();
+makeRequest();
 </script>
 
 <header :class="$style.HeaderPage">
@@ -14,7 +17,7 @@ title: YouTube
 </header>
 <article :class="$style.SectionPage">
   <HeaderSection title="Shorts"/>
-  <ItemsSection :data="Shorts" />
+  <ItemsSection :data="videos" />
 </article>
 
 <style module>

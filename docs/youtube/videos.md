@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Shorts
+title: Videos
 ---
 
 <script setup>
@@ -8,5 +8,5 @@ title: Shorts
   import YouTube from "../components/YouTube.vue"
 </script>
 
-<HeaderPage title="shorts"/>
-<YouTube type="shorts"/>
+<HeaderPage title="Videos"/>
+<YouTube type="videos"/>

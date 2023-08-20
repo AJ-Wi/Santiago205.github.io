@@ -11,6 +11,7 @@ const props = defineProps(["data"]);
       :link="short.videoId"
       :thumbnail="short.thumbnail"
       :isShort="short.isShort"
+      :date="short.date"
     />
   </section>
 </template>
@@ -18,9 +19,10 @@ const props = defineProps(["data"]);
 <style module>
 .ItemsSection {
   display: grid;
-  gap: 24px;
+  column-gap: 10px;
+  row-gap: 40px;
   margin: 40px auto;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  max-width: calc(210px * 4 + 24px * 3);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  max-width: calc(150px * 6 + 10px * 5);
 }
 </style>

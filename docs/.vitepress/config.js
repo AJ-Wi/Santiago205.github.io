@@ -15,6 +15,7 @@ export default {
         items: [
           { text: "Shorts", link: "/youtube/shorts" },
           { text: "Videos", link: "/youtube/videos" },
+          { text: "Lives", link: "/youtube/lives" },
         ],
       },
       { text: "prueba", link: "/prueba/" },

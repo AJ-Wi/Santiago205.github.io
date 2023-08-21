@@ -1,13 +1,16 @@
 <script setup>
 const baseLink = "https://www.youtube.com/shorts/";
 
-const props = defineProps(["title", "link", "thumbnail", "isShort", "date"]);
+const props = defineProps(["title", "link", "thumbnail", "isShort", "date", "isLive", "type"]);
+const type = props.isShort ? "shorts" : props.isLive ? "lives" : "videos";
+const imageContainer = props.type === "shorts" ? "" : "ImageContainer";
+const responsiveImage = props.type === "shorts" ? "" : "ResponsiveImage";
 </script>
 
 <template>
-  <a v-if="!isShort" :class="$style.Item" :href="baseLink + link" target="_blank" rel="noreferrer">
-    <div :class="$style.ImageContainer">
-      <img :src="thumbnail" :alt="title" :class="$style.ResponsiveImage" />
+  <a v-if="type === props.type" :class="$style.Item" :href="baseLink + link" target="_blank" rel="noreferrer">
+    <div :class="$style[imageContainer]">
+      <img :src="thumbnail" :alt="title" :class="$style[responsiveImage]" />
     </div>
     <section :class="$style.Description">
       <h3 :class="$style.TitleItem">{{ title }}</h3>

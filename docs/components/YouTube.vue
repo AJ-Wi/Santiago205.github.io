@@ -1,5 +1,4 @@
 <script setup>
-import ShortsSection from "./ShortsSection.vue";
 import VideosSection from "./VideosSection.vue";
 import { readDataYoutube } from "../composables/UseReadDataYoutube";
 
@@ -11,8 +10,7 @@ makeRequest();
 
 <template>
   <article :class="$style.SectionPage">
-    <ShortsSection v-if="type === 'shorts'" :data="videos" />
-    <VideosSection v-if="type === 'videos'" :data="videos" />
+    <VideosSection :type="type" :data="videos" />
   </article>
 </template>
 

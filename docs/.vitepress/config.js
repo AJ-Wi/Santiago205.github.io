@@ -18,6 +18,7 @@ export default {
           { text: "Lives", link: "/youtube/lives" },
         ],
       },
+      { text: "Comunidad", link: "/community/" },
       { text: "prueba", link: "/prueba/" },
     ],
     footer: {

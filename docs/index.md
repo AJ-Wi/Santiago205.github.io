@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Únete
-      link: /prueba/
+      link: /community/
 
 features:
   - icon:
